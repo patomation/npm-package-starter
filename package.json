@@ -17,7 +17,6 @@
     "unit:coverage": "nyc ava",
     "test": "npm run compile & npm run unit",
     "coverage": "npm run compile & npm run unit:coverage",
-    "prepublish": "npm run test & npm run build",
     "release": "standard-version",
     "publish": "git push --follow-tags && npm publish",
     "prepare": "husky install"

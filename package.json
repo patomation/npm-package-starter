@@ -11,12 +11,12 @@
   "scripts": {
     "compile:tests": "tsc --project tsconfig.test.json",
     "compile:package": "tsc --project tsconfig.json",
-    "compile": "npm run compile:tests & npm run compile:package",
+    "compile": "npm run compile:tests && npm run compile:package",
     "build": "npm run compile",
     "unit": "ava",
     "unit:coverage": "nyc ava",
-    "test": "npm run compile & npm run unit",
-    "coverage": "npm run compile & npm run unit:coverage",
+    "test": "npm run compile && npm run unit",
+    "coverage": "npm run compile && npm run unit:coverage",
     "release": "standard-version",
     "publish": "git push --follow-tags && npm publish",
     "prepare": "husky install"

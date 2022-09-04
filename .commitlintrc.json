@@ -5,6 +5,7 @@
       "deps",
       "dev",
       "doc",
+      "test",
       "typescript"
     ]]
   }

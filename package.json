@@ -18,8 +18,7 @@
     "test": "npm run compile && npm run unit",
     "coverage": "npm run compile && npm run unit:coverage",
     "watch:compile": "onchange ./src/**/*.ts -- npm run compile",
-    "watch:unit": "wait-on build && npm run unit -- --watch",
-    "watch:test": "concurrently npm:watch:compile npm:watch:unit",
+    "watch:test": "onchange 'src/**/*.ts' -- npm run test",
     "release": "standard-version",
     "publish": "git push --follow-tags && npm publish",
     "prepare": "husky install"

@@ -5,8 +5,10 @@
       "deps",
       "dev",
       "doc",
+      "index",
       "test",
-      "typescript"
+      "typescript",
+      "update"
     ]]
   }
 }

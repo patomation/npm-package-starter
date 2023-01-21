@@ -20,7 +20,7 @@
     "watch:compile": "onchange ./src/**/*.ts -- npm run compile",
     "watch:test": "onchange 'src/**/*.ts' -- npm run test",
     "release": "standard-version",
-    "publish": "git push --follow-tags && npm publish",
+    "publish": "git push --follow-tags",
     "prepare": "husky install"
   },
   "keywords": [
@@ -41,13 +41,8 @@
     "@typescript-eslint/eslint-plugin": "4.26.0",
     "@typescript-eslint/parser": "4.26.0",
     "ava": "^4.3.3",
+    "clunk": "1.1.0",
     "concurrently": "6.2.0",
-    "eslint": "7.27.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-import": "2.23.4",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.1.0",
-    "eslint-plugin-standard": "4.1.0",
     "husky": "6.0.0",
     "nyc": "15.1.0",
     "onchange": "7.1.0",

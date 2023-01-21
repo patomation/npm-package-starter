@@ -1,5 +1,5 @@
 {
-  "name": "npm-package-starter",
+  "name": "@patomation/npm-package-starter",
   "version": "1.0.0",
   "description": "TypeScript NPM Package Starter",
   "repository": {

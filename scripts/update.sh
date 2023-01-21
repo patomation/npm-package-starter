@@ -12,9 +12,11 @@ remove(){
   rm $@ 2> /dev/null
 }
 
-copy .husky
+remove -r $PDW/.husky
+cp -r $ROOT_DIR/.husky $PWD
 
-copy .commitlintrc.json
+# copy .commitlintrc.json
+node $SCRIPT_DIR/modules/commitlintrc-updater.js $ROOT_DIR/.commitlintrc.json $PWD/.commitlintrc.json
 remove $PWD/commitlint.config.json
 
 copy .gitignore
@@ -31,3 +33,4 @@ copy tsconfig.test.json
 node $SCRIPT_DIR/modules/package-updater.js $ROOT_DIR/package.json $PWD/package.json -r "$(git remote -v)"
 remove -r $PWD/node_modules
 remove $PWD/package-lock.json
+

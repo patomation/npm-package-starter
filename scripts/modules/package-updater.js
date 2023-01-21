@@ -35,21 +35,35 @@ function main() {
     },
   })
   if (!packagePathA || !packagePathB) return
-  const repositoryUrl = parseGitRemoteToUrl(gitremote)
+  const repositoryUrl =
+    parseGitRemoteToUrl(gitremote)
   console.log(repositoryUrl)
   const packageA = readJson(packagePathA)
   const packageB = readJson(packagePathB)
   // All the stuff we want to keep from the old packages
-  const keepKeys = ['name', 'description', 'version', 'keywords']
+  const keepKeys = [
+    'name',
+    'description',
+    'version',
+    'keywords',
+    'files',
+  ]
   keepKeys.forEach((key) => {
-    const value = packageB[key]
+    const value = packageB[key] || packageA[key]
     packageA[key] = value
   })
-  ;(packageA['repository'] = {
+  packageA['repository'] = {
     type: 'git',
     url: repositoryUrl,
-    // "url": "git://github.com/patomation/clunk.git"
-  }),
-    writeJson(packagePathB, packageA)
+  }
+  packageA.devDependencies = {
+    ...packageB.devDependencies,
+    ...packageA.devDependencies,
+  }
+  packageA.scripts = {
+    ...packageB.scripts,
+    ...packageA.scripts,
+  }
+  writeJson(packagePathB, packageA)
 }
 main()

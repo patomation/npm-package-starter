@@ -2,6 +2,10 @@
   "name": "npm-package-starter",
   "version": "0.0.0",
   "description": "TypeScript NPM Package Starter",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/USER/REPO_NAME.git"
+  },
   "public": true,
   "main": "build/index.js",
   "types": "build/index.d.ts",

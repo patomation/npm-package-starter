@@ -1,5 +1,5 @@
 {
-  "name": "@patomation/npm-package-starter",
+  "name": "@patomation/nps",
   "version": "1.0.0",
   "description": "TypeScript NPM Package Starter",
   "repository": {
@@ -10,8 +10,12 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
-    "build"
+    "build",
+    "bin"
   ],
+  "bin": {
+    "nps": "bin/nps.sh"
+  },
   "scripts": {
     "compile:tests": "tsc --project tsconfig.test.json",
     "compile:package": "tsc --project tsconfig.json",
@@ -38,6 +42,9 @@
       "build/**/*.test.js"
     ]
   },
+  "dependencies": {
+    "clunk": "1.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
@@ -46,7 +53,6 @@
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
     "ava": "^5.1.1",
-    "clunk": "1.1.0",
     "concurrently": "7.6.0",
     "husky": "8.0.3",
     "nyc": "15.1.0",

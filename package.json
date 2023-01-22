@@ -14,7 +14,7 @@
     "bin"
   ],
   "bin": {
-    "nps": "bin/nps.sh"
+    "nps": "bin/nps-cli.sh"
   },
   "scripts": {
     "compile:tests": "tsc --project tsconfig.test.json",

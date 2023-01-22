@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/USER/REPO_NAME/compare/v1.0.1...v1.0.2) (2023-01-22)
+
+
+### Bug Fixes
+
+* **bin:** point at nps-cli.sh instead on nps.sh ([dc89eac](https://github.com/USER/REPO_NAME/commit/dc89eacb55237a17cb7c0d4cbf5eb0d5c9cba3b3))
+
 ### [1.0.1](https://github.com/USER/REPO_NAME/compare/v1.0.0...v1.0.1) (2023-01-22)
 
 ## 1.0.0 (2023-01-21)
